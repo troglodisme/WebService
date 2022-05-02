@@ -6,32 +6,56 @@
 //
 import SwiftUI
 import Alamofire
+import CoreLocation
 
 struct ContentView: View {
     
     //    @StateObject var weatherAPI = OpenWeather()
     //    @StateObject var weather = WeatherValues()
     //    @ObservedObject var weather: WeatherValues
+    //
+    @State var cityValue = ""
+    @State var latValue = 0.0
+    @State var lonValue = 0.0
+    @State var mainValue = ""
+    @State var descriptionValue = ""
+    @State var tempeartureValue = 0.0
     
     @StateObject var locationManager = LocationManager()
-    var weatherManager = WeatherManager()
+    @StateObject var weatherManager = WeatherManager()
     
     var body: some View {
         
         NavigationView {
             
+            ZStack{
+                Color(.red)
+                
             VStack(spacing:20){
                                     
+                
                 if let location = locationManager.location {
+                    
                     Text("Thanks for sharing your location")
                         .bold()
                         .font(.title)
+                        .onAppear{
+                            weatherManager.getCurrentWeather(latitude: location.latitude, longitude: location.longitude)
+                        }
                     
-                    Text("Your coordinates are: \(location.longitude), \(location.latitude)")
+                                                            
+                    Text("Your coordinates are: \(location.latitude), \(location.longitude) ")
                     
-                    NavigationLink(destination: WeatherView()) {
-                        Text("Get Weather")
-                    }
+                    Text("City: \(weatherManager.cityValue)")
+                    Text("Weather condition: \(weatherManager.descriptionValue)")
+                    Text("Temp feels like: \(weatherManager.tempeartureValue)")
+                    Text("Icon: ")
+                    
+                    AsyncImage(url: URL(string: "https://openweathermap.org/img/w/01d.png"))
+                        
+//                    NavigationLink(destination: WeatherView()) {
+//                        Text("Get Weather")
+//                    }
                 }
                 else {
                     if locationManager.isLoading {
@@ -47,11 +71,11 @@ struct ContentView: View {
             //                        .background(Color(hue: 0.656, saturation: 0.787, brightness: 0.354))
             //                        .preferredColorScheme(.dark)
             
-            
         }
-        
-        
+        }
     }
+    
+    
 }
 
 struct Weather_Previews: PreviewProvider {

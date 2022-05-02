@@ -19,11 +19,10 @@ struct LoadingView: View {
 
             Text("Start by sharing your location to get the weather forecast for your area")            
             Text("Getting your location...")
-                .padding()
             
             ProgressView()
                 .progressViewStyle(CircularProgressViewStyle(tint: .accentColor))
-                .frame(maxWidth: .infinity, maxHeight: 50)
+                .frame(maxWidth: .infinity, maxHeight: 40)
         }
         .multilineTextAlignment(.center)
         .padding()
