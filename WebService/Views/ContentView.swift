@@ -12,7 +12,7 @@ struct ContentView: View {
     
     @StateObject var locationManager = LocationManager()
     @StateObject var weatherManager = WeatherManager()
-    
+         
     var body: some View {
         
         NavigationView {
