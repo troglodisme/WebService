@@ -56,6 +56,6 @@ struct Weather: Decodable {
         case id = "id"
         case main = "main"
         case weatherDescription = "description"
-        case icon
+        case icon = "icon"
     }
 }

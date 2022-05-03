@@ -10,71 +10,83 @@ import CoreLocation
 
 struct ContentView: View {
     
-    //    @StateObject var weatherAPI = OpenWeather()
-    //    @StateObject var weather = WeatherValues()
-    //    @ObservedObject var weather: WeatherValues
-    //
-    @State var cityValue = ""
-    @State var latValue = 0.0
-    @State var lonValue = 0.0
-    @State var mainValue = ""
-    @State var descriptionValue = ""
-    @State var tempeartureValue = 0.0
-    
     @StateObject var locationManager = LocationManager()
     @StateObject var weatherManager = WeatherManager()
     
     var body: some View {
         
         NavigationView {
-            
             ZStack{
-                Color(.red)
-                
-            VStack(spacing:20){
-                                    
-                
-                if let location = locationManager.location {
+                VStack(spacing:20){
                     
-                    Text("Thanks for sharing your location")
-                        .bold()
-                        .font(.title)
-                        .onAppear{
-                            weatherManager.getCurrentWeather(latitude: location.latitude, longitude: location.longitude)
-                        }
-                    
-                                                            
-                    Text("Your coordinates are: \(location.latitude), \(location.longitude) ")
-                    
-                    Text("City: \(weatherManager.cityValue)")
-                    Text("Weather condition: \(weatherManager.descriptionValue)")
-                    Text("Temp feels like: \(weatherManager.tempeartureValue)")
-                    Text("Icon: ")
-                    
-                    AsyncImage(url: URL(string: "https://openweathermap.org/img/w/01d.png"))
+                    if let location = locationManager.location {
                         
-//                    NavigationLink(destination: WeatherView()) {
-//                        Text("Get Weather")
-//                    }
-                }
-                else {
-                    if locationManager.isLoading {
-                        LoadingView()
-                    } else {
-                        WelcomeView()
-                            .environmentObject(locationManager)
+                        Text("\(weatherManager.cityValue)")
+                            .bold()
+                            .font(.title)
+                            .onAppear{
+                                weatherManager.getCurrentWeather(latitude: location.latitude, longitude: location.longitude)
+                            }
+                        
+                        let temp = weatherManager.tempeartureValue
+                        Text("\(temp, specifier: "%.f") °C ")
+                            .font(.title)
+                        
+                        Text("\(weatherManager.descriptionValue)".capitalized)
+                            .font(.title2)
+                        
+                        AsyncImage(url:
+                                    URL(string: "https://openweathermap.org/img/wn/\(weatherManager.icon)@4x.png")
+                        )
+                        
+                        Button {
+                            print("get weather")
+                            weatherManager.getCurrentWeather(
+                                latitude: location.latitude,
+                                longitude: location.longitude
+                            )
+                        } label: {
+                            Image(systemName: "arrow.clockwise")
+                            Text("Check Again")
+                            
+                        }
+                        .padding()
+                        .background(Color.accentColor)
+                        .cornerRadius(15)
+                        .foregroundColor(.white)
+                    }
+                    
+                    else {
+                        if locationManager.isLoading {
+                            LoadingView()
+                        } else {
+                            WelcomeView()
+                                .environmentObject(locationManager)
+                        }
                     }
                 }
+                .navigationTitle("Current Weather")
+                
             }
-            .multilineTextAlignment(.center)
-            .padding()
-            //                        .background(Color(hue: 0.656, saturation: 0.787, brightness: 0.354))
-            //                        .preferredColorScheme(.dark)
-            
-        }
+            .toolbar {
+                ToolbarItemGroup(placement: .bottomBar) {
+                    Button{
+                        print("location map")
+                    } label: {
+                        Image(systemName: "map")
+                    }
+                    
+                    Button{
+                        print("location list")
+                    } label: {
+                        Image(systemName: "list.dash")
+                        
+                    }
+                                        
+                }
+            }
         }
     }
-    
     
 }
 
@@ -85,7 +97,10 @@ struct Weather_Previews: PreviewProvider {
 }
 
 
-//aggiungere anche le funzioni come si era fatto in questo esempio?
+
+
+
+
 
 //struct SimpleModel {
 //

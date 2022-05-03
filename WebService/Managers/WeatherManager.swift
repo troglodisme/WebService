@@ -17,10 +17,12 @@ class WeatherManager: ObservableObject {
     @Published var mainValue = ""
     @Published var descriptionValue = ""
     @Published var tempeartureValue = 0.0
+    @Published var icon = ""
+
 
     func getCurrentWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
-        print("lat \(latitude)")
-        print("longgg \(longitude)")
+        print("current lat \(latitude)")
+        print("current long \(longitude)")
         
         let KEY = "cbbf654a1956664b0c183ba26f389799"
         let URL = "https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longitude)&appid=\(KEY)&units=metric"
@@ -39,14 +41,18 @@ class WeatherManager: ObservableObject {
                 self.tempeartureValue = temperature
                 print(temperature)
             }
-            
-            
+                            
             if let cityName = response.value?.name {
                 self.cityValue = cityName
                 print(cityName)
             } else {
                 print("no city")
             }
+            
+            if let icon = response.value?.weather[0].icon {
+                self.icon = icon
+                print(icon)
+            } 
 
 //            if let latitude = response.value?.coord.lat {
 //                self.latValue = latitude
@@ -58,13 +64,8 @@ class WeatherManager: ObservableObject {
 //                print("lon \(longitude)")
 //            }
 
-            
-            
+                    
     }
-        
-
-
-        
 
  }
 }

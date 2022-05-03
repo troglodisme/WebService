@@ -13,11 +13,13 @@ struct LoadingView: View {
 //    https://developer.apple.com/documentation/swiftui/progressview
         
         VStack(spacing:20){
-            Text("Welcome to the Weather App")
+            Text("Welcome")
                 .bold()
                 .font(.title)
 
-            Text("Start by sharing your location to get the weather forecast for your area")            
+            Text("Please share your location to get the weather for your area")
+                .padding()
+
             Text("Getting your location...")
             
             ProgressView()
