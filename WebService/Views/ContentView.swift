@@ -19,6 +19,8 @@ struct ContentView: View {
             ZStack{
                 VStack(spacing:20){
                     
+//                    WeatherView()
+                    
                     if let location = locationManager.location {
                         
                         Text("\(weatherManager.cityValue)")
@@ -28,16 +30,29 @@ struct ContentView: View {
                                 weatherManager.getCurrentWeather(latitude: location.latitude, longitude: location.longitude)
                             }
                         
-                        let temp = weatherManager.tempeartureValue
-                        Text("\(temp, specifier: "%.f") °C ")
-                            .font(.title)
-                        
-                        Text("\(weatherManager.descriptionValue)".capitalized)
+                        let temp = weatherManager.current_tempValue
+                        Text("Temp today: \(temp, specifier: "%.f") °C ")
                             .font(.title2)
                         
-                        AsyncImage(url:
-                                    URL(string: "https://openweathermap.org/img/wn/\(weatherManager.icon)@4x.png")
-                        )
+                        Text("Weather today: \(weatherManager.descriptionValue)".capitalized)
+                            .font(.title2)
+                        
+                        AsyncImage(url: URL(string: "https://openweathermap.org/img/wn/\(weatherManager.icon)@2x.png"))
+                                       
+                        
+                        //tomorrow
+                        let temp_tomorrow = weatherManager.daily1_tempValue_day
+                        Text("Temp tomorrow: \(temp_tomorrow, specifier: "%.f") °C ")
+                            .font(.title2)
+                        
+                        Text("Weather tomorrow: \(weatherManager.daily1_descriptionValue)".capitalized)
+                            .font(.title2)
+                        
+                                      
+                        //perche' non fa icona del domani?
+                        AsyncImage(url: URL(string: "https://openweathermap.org/img/wn/\(weatherManager.daily1_icon)@2x.png"))
+
+
                         
                         Button {
                             print("get weather")
@@ -65,7 +80,7 @@ struct ContentView: View {
                         }
                     }
                 }
-                .navigationTitle("Current Weather")
+                .navigationTitle("Weather App")
                 
             }
             .toolbar {

@@ -8,9 +8,8 @@
 import Foundation
 import CoreLocation
 
-
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
-     let manager = CLLocationManager()
+    let manager = CLLocationManager()
     
     @Published var location: CLLocationCoordinate2D?
     @Published var isLoading = false
@@ -18,6 +17,7 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     override init() {
         super.init()
         manager.delegate = self
+        
     }
 
     func requestLocation() {

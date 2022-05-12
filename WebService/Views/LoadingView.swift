@@ -22,6 +22,7 @@ struct LoadingView: View {
 
             Text("Getting your location...")
             
+            
             ProgressView()
                 .progressViewStyle(CircularProgressViewStyle(tint: .accentColor))
                 .frame(maxWidth: .infinity, maxHeight: 40)
