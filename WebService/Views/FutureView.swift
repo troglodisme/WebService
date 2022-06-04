@@ -46,14 +46,11 @@ struct FutureView: View {
                             .font(.system(.caption, design: .rounded))
                             .fontWeight(.regular)
                             .foregroundColor(Color("Aqua"))
-
                 }
-
                 
                 Spacer()
                 
                 HStack {
-                    
                     Text("\(minTemp, specifier: "%.f") °C ")
                         .font(.system(.title2, design: .rounded))
                         .fontWeight(.regular)
@@ -68,6 +65,7 @@ struct FutureView: View {
                 }
             }
         }
+
     }
 }
 

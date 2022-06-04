@@ -27,6 +27,10 @@ struct ContentView: View {
         NavigationView {
             ZStack{
                 
+//                Color("BackgroundColor")
+                LinearGradient(gradient: Gradient(stops: [Gradient.Stop(color: Color(hue: 0.5294439476656627, saturation: 0.018001694277108436, brightness: 0.7553387377635543, opacity: 0.39770507812500006), location: 0.00023287259615384617), Gradient.Stop(color: Color(hue: 0.12583537274096387, saturation: 0.38392142789909645, brightness: 1.0, opacity: 0.6905502870858434), location: 0.7088416466346154)]), startPoint: UnitPoint.top, endPoint: UnitPoint.bottom)
+                    .edgesIgnoringSafeArea(.all)
+                
                 VStack {
                     
 
@@ -36,6 +40,7 @@ struct ContentView: View {
                             Text("\(locationManager.cityLocation)")
                                 .font(.system(.largeTitle, design: .rounded))
                                 .fontWeight(.bold)
+//                                .foregroundColor(.white)
                                     
                             HStack{
 //                                Image(systemName: (airQualityManager.aqiIcon))
@@ -43,6 +48,7 @@ struct ContentView: View {
                                 Text("\(airQualityManager.aqiValue)")
                                     .font(.system(.title3, design: .rounded))
                                     .fontWeight(.regular)
+//                                    .foregroundColor(.white)
                             }
                         }
                         
@@ -51,7 +57,7 @@ struct ContentView: View {
                         
                         ZStack{
                             Circle()
-                                .fill(.thinMaterial)
+                                .fill(.thickMaterial)
                                 .frame(width: 70, height: 70)
                                 .padding()
                                 .opacity(opacity)
@@ -122,8 +128,8 @@ struct ContentView: View {
                     
                     VStack {
                         Rectangle()
-                            .fill(.thickMaterial)
                             .frame(height: 30)
+                            .blendMode(.destinationOut)
                         
                         VStack{
                             
@@ -135,39 +141,44 @@ struct ContentView: View {
                                        dailyId: weatherManager.dailyId_1
                             )
                             
-                            FutureView(day: weatherManager.daily_dtVal_2,                                    icon: weatherManager.daily_icon_2,
+                            FutureView(day: weatherManager.daily_dtVal_2,
+                                       icon: weatherManager.daily_icon_2,
                                        minTemp: weatherManager.daily_tempMin_2,
                                        maxTemp: weatherManager.daily_tempMax_2,
                                        dailyPop: weatherManager.daily_pop_2,
                                        dailyId: weatherManager.dailyId_2
                             )
                             
-                            FutureView(day: weatherManager.daily_dtVal_3,                                    icon: weatherManager.daily_icon_3,
+                            FutureView(day: weatherManager.daily_dtVal_3,
+                                       icon: weatherManager.daily_icon_3,
                                        minTemp: weatherManager.daily_tempMin_3,
                                        maxTemp: weatherManager.daily_tempMax_3,
                                        dailyPop: weatherManager.daily_pop_3,
                                        dailyId: weatherManager.dailyId_3
                             )
                             
-                            FutureView(day: weatherManager.daily_dtVal_4,                                    icon: weatherManager.daily_icon_4,
+                            FutureView(day: weatherManager.daily_dtVal_4,
+                                       icon: weatherManager.daily_icon_4,
                                        minTemp: weatherManager.daily_tempMin_4,
                                        maxTemp: weatherManager.daily_tempMax_4,
                                        dailyPop: weatherManager.daily_pop_4,
                                        dailyId: weatherManager.dailyId_4
                             )
+                            
+                            Rectangle()
+                                .frame(height: 30)
+                                .blendMode(.destinationOut)
                         }
                         .padding(.horizontal, 20)
                                                 
-                        Rectangle()
-                            .fill(.thickMaterial)
-                            .frame(height: 30)
+
                     }
                     .padding(.horizontal, 10)
                     .frame(maxWidth: .infinity)
-                    .background(.ultraThinMaterial)
+                    .background(.thinMaterial)
                     .clipShape(RoundedRectangle(cornerRadius: 75))
                     .padding(.horizontal, 10)
-                    
+//                    
                     Spacer()
                     Spacer()
                     

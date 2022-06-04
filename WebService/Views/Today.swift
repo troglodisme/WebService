@@ -54,7 +54,7 @@ struct Today: View {
             .padding(.horizontal, 5)
         }
         .padding(10)
-        .background(.ultraThinMaterial)
+        .background(.thinMaterial)
         .clipShape(Capsule())
                 
         

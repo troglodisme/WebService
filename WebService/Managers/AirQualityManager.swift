@@ -28,28 +28,28 @@ class AirQualityManager: ObservableObject {
                 print("aqi is \(aqi)")
                 
                 if aqi == 1 {
-                    self.aqiValue = "Air Quality is: Good"
+                    self.aqiValue = "Air quality here is: Good"
                     self.aqiIcon = "aqi.low"                    
                 }
                 
                 if aqi == 2 {
-                    self.aqiValue = "Air Quality is: Fair"
+                    self.aqiValue = "Air quality here is: Fair"
                     self.aqiIcon = "aqi.low"
 
                 }
                 
                 if aqi == 3 {
-                    self.aqiValue = "Air Quality is: Moderate"
+                    self.aqiValue = "Air quality here is: Moderate"
                     self.aqiIcon = "aqi.medium"
                 }
                 
                 if aqi == 4 {
-                    self.aqiValue = "Air Quality is: Poor"
+                    self.aqiValue = "Air quality here is: Poor"
                     self.aqiIcon = "aqi.high"
                 }
                 
                 if aqi == 5 {
-                    self.aqiValue = "Air Quality is: Very Poor"
+                    self.aqiValue = "Air quality here is: Very Poor"
                     self.aqiIcon = "aqi.high"
 
                 }
