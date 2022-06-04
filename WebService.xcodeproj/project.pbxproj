@@ -11,15 +11,21 @@
 		4E1920D027FC31D40028AC05 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1920CF27FC31D40028AC05 /* ContentView.swift */; };
 		4E1920D227FC31D60028AC05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E1920D127FC31D60028AC05 /* Assets.xcassets */; };
 		4E1920D527FC31D60028AC05 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E1920D427FC31D60028AC05 /* Preview Assets.xcassets */; };
-		4E1FAFE828207DFB00AA6587 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1FAFE728207DFB00AA6587 /* WeatherView.swift */; };
+		4E23104E282EA240003156DC /* SwiftLocation in Frameworks */ = {isa = PBXBuildFile; productRef = 4E23104D282EA240003156DC /* SwiftLocation */; };
+		4E231050282EB689003156DC /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E23104F282EB689003156DC /* MapView.swift */; };
+		4E2755382844234900A4552E /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = 4E2755372844234900A4552E /* SFSafeSymbols */; };
 		4E2F0B3C282067BF00CD86AB /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2F0B3B282067BF00CD86AB /* LocationManager.swift */; };
 		4E2F0B3E2820685500CD86AB /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2F0B3D2820685400CD86AB /* WelcomeView.swift */; };
 		4E2F0B4428206F6600CD86AB /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2F0B4328206F6600CD86AB /* LoadingView.swift */; };
 		4E2F0B482820772B00CD86AB /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2F0B472820772B00CD86AB /* WeatherManager.swift */; };
-		4E6097182829CF1F00FBAFC2 /* testjson in Resources */ = {isa = PBXBuildFile; fileRef = 4E6097172829CF1F00FBAFC2 /* testjson */; };
 		4E60971A2829D05100FBAFC2 /* WeatherData_1call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6097192829D05100FBAFC2 /* WeatherData_1call.swift */; };
+		4E72D810284BDB43007176B4 /* AirQuality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E72D80F284BDB43007176B4 /* AirQuality.swift */; };
+		4E72D812284BDBDB007176B4 /* AirQualityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E72D811284BDBDB007176B4 /* AirQualityManager.swift */; };
+		4E72D814284BE014007176B4 /* AirQualityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E72D813284BE014007176B4 /* AirQualityData.swift */; };
 		4E9F500128114CA500BF2BDB /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F500028114CA500BF2BDB /* WeatherData.swift */; };
 		4EDEC23A2804D35400AD6D4E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4EDEC2392804D35400AD6D4E /* Alamofire */; };
+		4EEBA29F2842231900940FF7 /* Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEBA29E2842231900940FF7 /* Today.swift */; };
+		4EEBA2A12842364000940FF7 /* FutureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEBA2A02842364000940FF7 /* FutureView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,14 +34,18 @@
 		4E1920CF27FC31D40028AC05 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4E1920D127FC31D60028AC05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E1920D427FC31D60028AC05 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		4E1FAFE728207DFB00AA6587 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		4E23104F282EB689003156DC /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		4E2F0B3B282067BF00CD86AB /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		4E2F0B3D2820685400CD86AB /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		4E2F0B4328206F6600CD86AB /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		4E2F0B472820772B00CD86AB /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
-		4E6097172829CF1F00FBAFC2 /* testjson */ = {isa = PBXFileReference; lastKnownFileType = text; path = testjson; sourceTree = "<group>"; };
 		4E6097192829D05100FBAFC2 /* WeatherData_1call.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData_1call.swift; sourceTree = "<group>"; };
+		4E72D80F284BDB43007176B4 /* AirQuality.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirQuality.swift; sourceTree = "<group>"; };
+		4E72D811284BDBDB007176B4 /* AirQualityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityManager.swift; sourceTree = "<group>"; };
+		4E72D813284BE014007176B4 /* AirQualityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityData.swift; sourceTree = "<group>"; };
 		4E9F500028114CA500BF2BDB /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		4EEBA29E2842231900940FF7 /* Today.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Today.swift; sourceTree = "<group>"; };
+		4EEBA2A02842364000940FF7 /* FutureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +53,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E2755382844234900A4552E /* SFSafeSymbols in Frameworks */,
 				4EDEC23A2804D35400AD6D4E /* Alamofire in Frameworks */,
+				4E23104E282EA240003156DC /* SwiftLocation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,7 +65,6 @@
 		4E1920C127FC31D40028AC05 = {
 			isa = PBXGroup;
 			children = (
-				4E6097172829CF1F00FBAFC2 /* testjson */,
 				4E1920CC27FC31D40028AC05 /* WebService */,
 				4E1920CB27FC31D40028AC05 /* Products */,
 			);
@@ -91,6 +102,7 @@
 		4E2F0B3F2820699900CD86AB /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				4E72D811284BDBDB007176B4 /* AirQualityManager.swift */,
 				4E2F0B472820772B00CD86AB /* WeatherManager.swift */,
 				4E2F0B3B282067BF00CD86AB /* LocationManager.swift */,
 			);
@@ -100,8 +112,11 @@
 		4E2F0B4228206E0400CD86AB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4EEBA29E2842231900940FF7 /* Today.swift */,
+				4E72D80F284BDB43007176B4 /* AirQuality.swift */,
+				4EEBA2A02842364000940FF7 /* FutureView.swift */,
+				4E23104F282EB689003156DC /* MapView.swift */,
 				4E1920CF27FC31D40028AC05 /* ContentView.swift */,
-				4E1FAFE728207DFB00AA6587 /* WeatherView.swift */,
 				4E2F0B4328206F6600CD86AB /* LoadingView.swift */,
 				4E2F0B3D2820685400CD86AB /* WelcomeView.swift */,
 			);
@@ -111,6 +126,7 @@
 		4E9F500228114D7B00BF2BDB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4E72D813284BE014007176B4 /* AirQualityData.swift */,
 				4E9F500028114CA500BF2BDB /* WeatherData.swift */,
 				4E6097192829D05100FBAFC2 /* WeatherData_1call.swift */,
 			);
@@ -135,6 +151,8 @@
 			name = WebService;
 			packageProductDependencies = (
 				4EDEC2392804D35400AD6D4E /* Alamofire */,
+				4E23104D282EA240003156DC /* SwiftLocation */,
+				4E2755372844234900A4552E /* SFSafeSymbols */,
 			);
 			productName = WebService;
 			productReference = 4E1920CA27FC31D40028AC05 /* WebService.app */;
@@ -166,6 +184,8 @@
 			mainGroup = 4E1920C127FC31D40028AC05;
 			packageReferences = (
 				4EDEC2382804D35400AD6D4E /* XCRemoteSwiftPackageReference "Alamofire" */,
+				4E23104C282EA240003156DC /* XCRemoteSwiftPackageReference "SwiftLocation" */,
+				4E2755362844234900A4552E /* XCRemoteSwiftPackageReference "SFSafeSymbols" */,
 			);
 			productRefGroup = 4E1920CB27FC31D40028AC05 /* Products */;
 			projectDirPath = "";
@@ -183,7 +203,6 @@
 			files = (
 				4E1920D527FC31D60028AC05 /* Preview Assets.xcassets in Resources */,
 				4E1920D227FC31D60028AC05 /* Assets.xcassets in Resources */,
-				4E6097182829CF1F00FBAFC2 /* testjson in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,10 +216,15 @@
 				4E60971A2829D05100FBAFC2 /* WeatherData_1call.swift in Sources */,
 				4E1920D027FC31D40028AC05 /* ContentView.swift in Sources */,
 				4E2F0B3E2820685500CD86AB /* WelcomeView.swift in Sources */,
+				4E72D812284BDBDB007176B4 /* AirQualityManager.swift in Sources */,
+				4EEBA29F2842231900940FF7 /* Today.swift in Sources */,
+				4E72D810284BDB43007176B4 /* AirQuality.swift in Sources */,
 				4E2F0B482820772B00CD86AB /* WeatherManager.swift in Sources */,
 				4E1920CE27FC31D40028AC05 /* WebServiceApp.swift in Sources */,
 				4E2F0B3C282067BF00CD86AB /* LocationManager.swift in Sources */,
-				4E1FAFE828207DFB00AA6587 /* WeatherView.swift in Sources */,
+				4E231050282EB689003156DC /* MapView.swift in Sources */,
+				4E72D814284BE014007176B4 /* AirQualityData.swift in Sources */,
+				4EEBA2A12842364000940FF7 /* FutureView.swift in Sources */,
 				4E2F0B4428206F6600CD86AB /* LoadingView.swift in Sources */,
 				4E9F500128114CA500BF2BDB /* WeatherData.swift in Sources */,
 			);
@@ -336,6 +360,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WebService/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WebService;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to show the correct weather.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -367,6 +392,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WebService/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WebService;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to show the correct weather.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -409,6 +435,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4E23104C282EA240003156DC /* XCRemoteSwiftPackageReference "SwiftLocation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/malcommac/SwiftLocation";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+		4E2755362844234900A4552E /* XCRemoteSwiftPackageReference "SFSafeSymbols" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SFSafeSymbols/SFSafeSymbols";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 		4EDEC2382804D35400AD6D4E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -420,6 +462,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4E23104D282EA240003156DC /* SwiftLocation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4E23104C282EA240003156DC /* XCRemoteSwiftPackageReference "SwiftLocation" */;
+			productName = SwiftLocation;
+		};
+		4E2755372844234900A4552E /* SFSafeSymbols */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4E2755362844234900A4552E /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;
+			productName = SFSafeSymbols;
+		};
 		4EDEC2392804D35400AD6D4E /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4EDEC2382804D35400AD6D4E /* XCRemoteSwiftPackageReference "Alamofire" */;

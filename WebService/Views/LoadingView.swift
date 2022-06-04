@@ -10,18 +10,10 @@ import SwiftUI
 struct LoadingView: View {
     var body: some View {
         
-//    https://developer.apple.com/documentation/swiftui/progressview
         
         VStack(spacing:20){
-            Text("Welcome")
-                .bold()
-                .font(.title)
-
-            Text("Please share your location to get the weather for your area")
-                .padding()
-
-            Text("Getting your location...")
             
+
             
             ProgressView()
                 .progressViewStyle(CircularProgressViewStyle(tint: .accentColor))

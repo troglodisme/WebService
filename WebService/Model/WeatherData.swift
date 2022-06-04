@@ -1,51 +1,39 @@
-////
-////  WeatherData.swift
-////  WebService
-////
-////  Created by Giulio Ammendola on 21/04/2022.
-////
 //
+//  WeatherData.swift
+//  WebService
+//
+//  Created by Giulio Ammendola on 21/04/2022.
+//
+
+//https://www.youtube.com/watch?v=dbM-Ew5HR6Y&t=0s
+
 //import Foundation
 //
 //
-//struct WeatherAPI: Decodable {
-//    
-//    let name: String //city name created from lat + long
-//    let coord: CoordDetail
-//    let weather: [Weather]
-//    let main: MainDetail
-//}
-//
-//struct CoordDetail: Decodable {
-//    
-//    let lat: Double
-//    let lon: Double
-//    
-//    private enum CodingKeys: String, CodingKey {
-//        case lat = "lat"
-//        case lon = "lon"
+//struct Forecast: Codable {
+//    struct Daily: Codable {
+//        let dt: Data
+//        struct Temp: Codable {
+//            let min: Double
+//            let max: Double
+//        }
+//        
+//        let temp: Temp
+//        let humidity: Int
+//        struct Weather: Codable {
+//            let id: Int
+//            let description: String
+//            let icon: String
+//            var weatherIconURL: URL {
+//                let urlString = "http://openweathermap.org/img/wn/\(icon)@2x.png"
+//                return URL(string: urlString)!
+//            }
+//        }
+//        let weather: [Weather]
+//        let clouds: Int
+//        let pop: Double
 //    }
-//}
-//
-//struct MainDetail: Decodable {
 //    
-//    let temp: Double
+//    let daily: [Daily]
 //    
-//    private enum CodingKeys: String, CodingKey {
-//        case temp = "temp"
-//    }
-//}
-//
-//struct Weather: Decodable {
-//    let id: Int
-//    var main: String
-//    var weatherDescription: String
-//    var icon: String
-//    
-//    enum CodingKeys: String, CodingKey {
-//        case id = "id"
-//        case main = "main"
-//        case weatherDescription = "description"
-//        case icon = "icon"
-//    }
 //}

@@ -3,4 +3,65 @@
    uuid = "8ABB4105-9A40-47EA-A2CB-B4146E32321A"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1E8D7B43-F577-4BF1-921A-A28C0190C0D4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WebService/Model/WeatherData_1call.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "CodingKeys"
+            landmarkType = "13">
+            <Locations>
+               <Location
+                  uuid = "1E8D7B43-F577-4BF1-921A-A28C0190C0D4 - 2e51407d024c0709"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WebService.currentDetail.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;WebService.currentDetail.CodingKeys&gt;"
+                  moduleName = "WebService"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/giulio/Documents/Apps/WebService/WebService/Model/WeatherData_1call.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  uuid = "1E8D7B43-F577-4BF1-921A-A28C0190C0D4 - b6a809879c719e1b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WebService.currentDetail.CodingKeys.rawValue.getter : Swift.String"
+                  moduleName = "WebService"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/giulio/Documents/Apps/WebService/WebService/Model/WeatherData_1call.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "80">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.RuntimeIssueBreakpoint">
+         <BreakpointContent
+            uuid = "025A6563-6F36-4B8F-A47A-74572BF2C598"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            breakpointStackSelectionBehavior = "1"
+            type = "8">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

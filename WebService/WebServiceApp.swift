@@ -12,9 +12,6 @@ struct WebServiceApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-//            CatFactsView()
-//            WeatherView()
-//            AirQualityView()
         }
     }
 }

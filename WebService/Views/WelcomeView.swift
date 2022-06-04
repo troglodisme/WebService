@@ -17,12 +17,12 @@ struct WelcomeView: View {
         VStack {
             
             VStack(spacing: 20) {
-                Text("Welcome")
-                    .bold()
-                    .font(.title)
-
-                Text("Please share your location to get the weather for your area")
-                    .padding()
+//                Text("Welcome")
+//                    .bold()
+//                    .font(.title)
+//
+//                Text("Please share your location to get the weather for your area")
+//                    .padding()
                 
                 LocationButton(.shareCurrentLocation) {
                         locationManager.requestLocation()
@@ -30,9 +30,8 @@ struct WelcomeView: View {
                 .cornerRadius(15)
                 .symbolVariant(.fill)
                 .foregroundColor(.white)
-                
-                
-//                .labelStyle(.iconOnly)
+                            
+                .labelStyle(.iconOnly)
 
             }
             .multilineTextAlignment(.center)
