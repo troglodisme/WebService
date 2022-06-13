@@ -70,3 +70,4 @@ struct tempDetail: Decodable {
         case max = "max"
     }
 }
+

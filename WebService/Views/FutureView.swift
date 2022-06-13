@@ -37,15 +37,23 @@ struct FutureView: View {
                         .font(.system(.title2))
                         .symbolRenderingMode(.multicolor)
                     
-                        
-//                        Text("weather condition id is \(dailyId)")
-// To do: Only show water percentage if it's rainy, weatherManager.id < 800
-                    
+                                            
                     let dailyPopPercentage = (dailyPop * 100.00)
+                    
+                    //ternary operator instead?
+                    
+                    if dailyPopPercentage == 0 {
+                        
+                        Text("")
+
+                    } else {
+                        
                         Text("\(dailyPopPercentage, specifier: "%.f")%")
-                            .font(.system(.caption, design: .rounded))
-                            .fontWeight(.regular)
-                            .foregroundColor(Color("Aqua"))
+                                .font(.system(.caption, design: .rounded))
+                                .fontWeight(.regular)
+                                .foregroundColor(Color("Aqua"))
+                    }
+
                 }
                 
                 Spacer()

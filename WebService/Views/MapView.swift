@@ -4,8 +4,9 @@ import MapKit
 
 struct MapView: View {
         
-    @StateObject var locationManager = LocationManager()
-    @StateObject var weatherManager = WeatherManager()
+    //non lo rinizializiamo, usiamo : invece che = 
+    @ObservedObject var locationManager: LocationManager
+
 
     var condition: String
     var temp: Double
@@ -18,23 +19,12 @@ struct MapView: View {
         let coordinate: CLLocationCoordinate2D
     }
     
-    let locations = [
+    @State var locations: [Location] = [
 //        Location(name: "Buckingham Palace", coordinate: CLLocationCoordinate2D(latitude: 51.501, longitude: -0.141)),
-        Location(name: "Home", coordinate: CLLocationCoordinate2D(latitude: 51.53464818, longitude: -0.05581317  )),
+//        Location(name: "Home", coordinate: CLLocationCoordinate2D(latitude: 51.53464818, longitude: -0.05581317  )),
 //        Location(name: "Work", coordinate: CLLocationCoordinate2D(latitude: 51.552, longitude: -0.040))
     ]
 
-    
-//    @State var currentRegion = MKCoordinateRegion(
-//        center:  CLLocationCoordinate2D(
-//          latitude: lat,
-//          longitude: long
-//        ),
-//        span: MKCoordinateSpan(
-//          latitudeDelta: 0.01,
-//          longitudeDelta: 0.01
-//       )
-//    )
     
     var body: some View {
         
@@ -51,7 +41,7 @@ struct MapView: View {
                         content: {
                             Image(systemName: "pin.circle.fill").foregroundColor(.red)
                                 .font(.title)
-//                            Text("\(lat),g \(long)")
+
                             Text("\(condition.capitalized), \(temp, specifier: "%.f") °C")
                                 .padding(10)
                                 .background(.white)
@@ -62,6 +52,14 @@ struct MapView: View {
                                 }
                         })
                 }.edgesIgnoringSafeArea(.all)
+                .onAppear() {
+                    self.locations.append(
+                        Location(name: "Home", coordinate: CLLocationCoordinate2D(latitude: self.locationManager.location!.latitude,
+                                                                                  longitude: self.locationManager.location!.longitude)
+                        )
+                    )
+                }
+            
 //                .onAppear {
             //                    weatherManager.getWeather(latitude: 51.552, longitude: -0.040)
 

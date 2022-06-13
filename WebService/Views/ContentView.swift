@@ -10,6 +10,9 @@ import CoreLocation
 import MapKit
 import CoreLocationUI
 
+//Per fare gli stili tutti uguali per font etc
+//https://www.hackingwithswift.com/books/ios-swiftui/custom-modifiers
+//https://useyourloaf.com/blog/swiftui-custom-environment-values/
 
 struct ContentView: View {
         
@@ -94,6 +97,9 @@ struct ContentView: View {
                                 else {
                                     LocationButton(.currentLocation) {
                                         locationManager.requestLocation()
+                                        
+                                        //on appear oppure background resume (quando riapri l'app), cercare nel pdf
+                                        
                                     }
                                     .symbolVariant(.fill)
                                     .labelStyle(.iconOnly)
@@ -110,6 +116,8 @@ struct ContentView: View {
                     Spacer()
                     
                     //Today's View
+                    //Aggiungere un altro if su locationmanager, con immagine
+                    
                     VStack {
                         
                     }
@@ -133,37 +141,54 @@ struct ContentView: View {
                         
                         VStack{
                             
-                            FutureView(day: weatherManager.daily_dtVal_1,
-                                       icon: weatherManager.daily_icon_1,
-                                       minTemp: weatherManager.daily_tempMin_1,
-                                       maxTemp: weatherManager.daily_tempMax_1,
-                                       dailyPop: weatherManager.daily_pop_1,
-                                       dailyId: weatherManager.dailyId_1
+                            FutureView(day: weatherManager.dailyArray[1].daily_dt,
+                                       icon: weatherManager.dailyArray[1].daily_icon,
+                                       minTemp: weatherManager.dailyArray[1].daily_tempMin,
+                                       maxTemp: weatherManager.dailyArray[1].daily_tempMax,
+                                       dailyPop: weatherManager.dailyArray[1].daily_pop,
+                                       dailyId: weatherManager.dailyArray[1].dailyId
                             )
                             
-                            FutureView(day: weatherManager.daily_dtVal_2,
-                                       icon: weatherManager.daily_icon_2,
-                                       minTemp: weatherManager.daily_tempMin_2,
-                                       maxTemp: weatherManager.daily_tempMax_2,
-                                       dailyPop: weatherManager.daily_pop_2,
-                                       dailyId: weatherManager.dailyId_2
+                            FutureView(day: weatherManager.dailyArray[2].daily_dt,
+                                       icon: weatherManager.dailyArray[2].daily_icon,
+                                       minTemp: weatherManager.dailyArray[2].daily_tempMin,
+                                       maxTemp: weatherManager.dailyArray[2].daily_tempMax,
+                                       dailyPop: weatherManager.dailyArray[2].daily_pop,
+                                       dailyId: weatherManager.dailyArray[2].dailyId
                             )
                             
-                            FutureView(day: weatherManager.daily_dtVal_3,
-                                       icon: weatherManager.daily_icon_3,
-                                       minTemp: weatherManager.daily_tempMin_3,
-                                       maxTemp: weatherManager.daily_tempMax_3,
-                                       dailyPop: weatherManager.daily_pop_3,
-                                       dailyId: weatherManager.dailyId_3
+                            FutureView(day: weatherManager.dailyArray[3].daily_dt,
+                                       icon: weatherManager.dailyArray[3].daily_icon,
+                                       minTemp: weatherManager.dailyArray[3].daily_tempMin,
+                                       maxTemp: weatherManager.dailyArray[3].daily_tempMax,
+                                       dailyPop: weatherManager.dailyArray[3].daily_pop,
+                                       dailyId: weatherManager.dailyArray[3].dailyId
                             )
                             
-                            FutureView(day: weatherManager.daily_dtVal_4,
-                                       icon: weatherManager.daily_icon_4,
-                                       minTemp: weatherManager.daily_tempMin_4,
-                                       maxTemp: weatherManager.daily_tempMax_4,
-                                       dailyPop: weatherManager.daily_pop_4,
-                                       dailyId: weatherManager.dailyId_4
+                            FutureView(day: weatherManager.dailyArray[4].daily_dt,
+                                       icon: weatherManager.dailyArray[4].daily_icon,
+                                       minTemp: weatherManager.dailyArray[4].daily_tempMin,
+                                       maxTemp: weatherManager.dailyArray[4].daily_tempMax,
+                                       dailyPop: weatherManager.dailyArray[4].daily_pop,
+                                       dailyId: weatherManager.dailyArray[4].dailyId
                             )
+                            
+                            FutureView(day: weatherManager.dailyArray[5].daily_dt,
+                                       icon: weatherManager.dailyArray[5].daily_icon,
+                                       minTemp: weatherManager.dailyArray[5].daily_tempMin,
+                                       maxTemp: weatherManager.dailyArray[5].daily_tempMax,
+                                       dailyPop: weatherManager.dailyArray[5].daily_pop,
+                                       dailyId: weatherManager.dailyArray[5].dailyId
+                            )
+                            
+                            FutureView(day: weatherManager.dailyArray[6].daily_dt,
+                                       icon: weatherManager.dailyArray[6].daily_icon,
+                                       minTemp: weatherManager.dailyArray[6].daily_tempMin,
+                                       maxTemp: weatherManager.dailyArray[6].daily_tempMax,
+                                       dailyPop: weatherManager.dailyArray[6].daily_pop,
+                                       dailyId: weatherManager.dailyArray[6].dailyId
+                            )
+
                             
                             Rectangle()
                                 .frame(height: 30)
@@ -188,7 +213,9 @@ struct ContentView: View {
 //                        .padding(10)
                     
                     NavigationLink(
-                        destination: MapView(condition: weatherManager.descriptionValue,
+                        destination: MapView(locationManager: self.locationManager,  //
+                                             
+                                             condition: weatherManager.descriptionValue,
                                              temp: weatherManager.current_tempValue,
                                              lat: weatherManager.latValue,
                                              long: weatherManager.lonValue
